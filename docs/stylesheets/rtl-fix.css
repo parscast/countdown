@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../fonts/Vazirmatn/Vazirmatn-Regular.woff2') format('woff2'),
+       url('../fonts/Vazirmatn/Vazirmatn-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, .md-typeset, .md-nav, .md-content {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+.md-content, .md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+
+.md-nav__item {
+  text-align: right;
+}
+
+.md-nav__link {
+  font-weight: 500;
+}
+
+
+.glightbox-clean .gdesc-inner {
+  text-align: center;
+  font-family: 'Vazirmatn', sans-serif;
+  direction: rtl;
+}
+
+
+/* --- تنظیمات شکل و تصویر در متن --- */
+.md-typeset figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  text-align: center !important;
+  background-color: var(--md-default-bg-color);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  max-width: 100%;
+}
+
+.md-typeset figure:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* --- تصویر داخل figure --- */
+.md-typeset figure img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- کپشن زیر تصویر --- */
+.md-typeset figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.6;
+  direction: rtl;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+/* --- بهینه‌سازی برای حالت تاریک --- */
+[data-md-color-scheme="slate"] .md-typeset figure {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+}
+
+[data-md-color-scheme="slate"] .md-typeset figure figcaption {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* بلوک‌های کد را همیشه چپ‌چین نگه دار */
+.md-typeset pre,
+.md-typeset code,
+.md-typeset .highlight {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* خطوط داخل کد هم چپ‌چین شوند */
+.md-typeset code {
+  unicode-bidi: embed;
+}

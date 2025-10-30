@@ -1,0 +1,66 @@
+site_name: "شمارش معکوس، تاریخ جهانی اعداد"
+site_description: "پروژه‌ای درباره‌ی سیر تحول اندیشه‌های عددی و تاریخ شمارش در تمدن‌های گوناگون"
+site_author: Parscasts
+repo_url: https://github.com/parscast/countdown
+repo_name: گیت‌هاب این کتاب
+
+theme:
+  name: material
+  language: fa
+  direction: rtl
+  font: false
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.tabs.link
+    - navigation.expand
+    - navigation.sections
+#    - navigation.top
+    - navigation.footer
+    - navigation.instant
+#    - navigation.tabs
+#    - toc.integrate
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: تغییر به حالت تیره
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: تغییر به حالت روشن
+
+extra_css:
+  - stylesheets/rtl-fix.css
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+markdown_extensions:
+  - footnotes
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js
+  - javascripts/init-lightbox.js
+
+plugins:
+   
+#  - search:
+#      lang: ['fa', 'en']
+nav:
+  - مقدمه: index.md
+  - درباره‌ی پروژه: about.md
