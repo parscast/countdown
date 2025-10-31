@@ -95,3 +95,8 @@ body, .md-typeset, .md-nav, .md-content {
 .md-typeset code {
   unicode-bidi: embed;
 }
+
+.mermaid {
+  direction: rtl !important;
+  text-align: center;
+}
