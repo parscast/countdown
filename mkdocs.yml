@@ -18,6 +18,7 @@ theme:
     - content.action.view
     - content.code.copy
     - content.tabs.link
+    # - content.tooltips
     - navigation.expand
     - navigation.sections
 #    - navigation.top
@@ -46,14 +47,26 @@ extra_css:
   - stylesheets/rtl-fix.css
   - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
 markdown_extensions:
-  - footnotes
-  - attr_list
+  - meta
+  - abbr
   - admonition
+  - attr_list
+  - footnotes
   - pymdownx.details
   - pymdownx.superfences
+  - codehilite
+  - toc:
+      permalink: true
   - pymdownx.arithmatex:
       generic: true
-
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets:
+      auto_append:
+        - docs/includes/abbreviations.md
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js
@@ -64,5 +77,17 @@ plugins:
 #  - search:
 #      lang: ['fa', 'en']
 nav:
-  - مقدمه: index.md
   - درباره‌ی پروژه: about.md
+  - مقدمه:
+    - پیش‌گفتار: index.md
+    - جستجو برای جام مقدس ریاضیات: 00-introduction/ch01-the-quest-for-mathematical-grail.md
+    - یک داستان طولانی: 00-introduction/ch02-a-very-long-story.md
+    - اولین قدم‌ها: 00-introduction/ch03-the-first-steps.md
+    - اولین ماشین‌های حساب: 00-introduction/ch04-the-earliest-counting-machines.md
+    - اولین اعداد در تاریخ: 00-introduction/ch05-the-first-numbers-in-history.md
+    - ساختار مشترک ذهن بشر: 00-introduction/ch06-the-common-structure-of-human-mind.md
+    - اعداد و حروف: 00-introduction/ch07-numbers-and-letters.md
+    - تاریخ یک اختراع بزرگ: 00-introduction/ch08-the-history-of-a-great-invention.md
+    - محاسبه، ارقام و اعداد: 00-introduction/ch09-computation-figures-and-numbers.md
+    - در نتیجه: 00-introduction/ch10-in-conclusion.md
+  # - test: test.md
